@@ -3,7 +3,6 @@ import 'materialize-css/dist/css/materialize.min.css';
 import './Home.scss'
 import Header from '../../Components/Header/Header'
 import Table from '../../Components/Tabela/Table'
-import Form from '../../Components/Formulario/Form'
 import PopUp from '../../utils/PopUp';
 import ApiService from '../../utils/ApiServices'
 
