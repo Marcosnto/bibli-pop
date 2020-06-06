@@ -33,7 +33,7 @@ class Livros extends Component {
         <div className="container">
           <div className="row">
             <div className="col s12 autores">
-              <h1>Livros</h1>
+              <h2 className="center titulo">Livros</h2>
               <DataTable dados={this.state.livros} titulo={this.state.titulo} colunas={['livro']} />
             </div>
           </div>

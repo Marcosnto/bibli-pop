@@ -1,3 +1,36 @@
+$cor-principal: #22031f;
+
+.menu {
+  background-color: $cor-principal;
+  font-family: 'Roboto';
+  font-weight: 400;
+  .brand-logo {
+    margin-left: 20px;
+  }
+  .opcoes {
+    margin-right: 20px;
+  }
+}
+
+.titulo{
+  @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500&display=swap');
+  font-family: 'Roboto';
+  font-weight: 100;
+  color: #0D040C;
+}
+
+.sobre{
+  font-size: 18px;
+}
+
+.indigo.lighten-2 {
+  background-color: #87B38D !important;
+}
+
+.indigo.lighten-2.btnRemover{
+  background-color: #FF7077 !important;
+}
+
 .App {
   text-align: center;
 }
@@ -27,15 +60,19 @@
   background-color: #152643;
 }
 
-.msg{
+.msg {
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.mb0{
+.mb0 {
   margin-bottom: 0px;
+}
+
+.mb-10 {
+  margin-bottom: 10px;
 }
 
 @keyframes App-logo-spin {
@@ -45,7 +82,4 @@
   to {
     transform: rotate(360deg);
   }
-}
-.mb-10{
-  margin-bottom: 10px;
 }

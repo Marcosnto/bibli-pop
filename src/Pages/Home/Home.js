@@ -1,6 +1,6 @@
 import React, { /* useState, */ Component, Fragment } from 'react';
 import 'materialize-css/dist/css/materialize.min.css';
-import './Home.css'
+import './Home.scss'
 import Header from '../../Components/Header/Header'
 import Table from '../../Components/Tabela/Table'
 import Form from '../../Components/Formulario/Form'
@@ -20,7 +20,7 @@ import ApiService from '../../utils/ApiServices'
 // }
 
 
-class App extends Component {
+class Home extends Component {
 
   constructor(props) {
     super(props);
@@ -48,17 +48,6 @@ class App extends Component {
       .catch(err => PopUp.exibeMensagem("error", "Erro na comunicação com a API ao remover o usuario"));
   }
 
-  handleAddAutor = autor => {
-    ApiService.CriarAutor(autor)
-      .then(res => {
-        if (res.message === 'success') {
-          this.setState({ autors: [...this.state.autors, autor] });
-          PopUp.exibeMensagem("success", "Autor Adicionado com Sucesso");
-        }
-      })
-      .catch(err => PopUp.exibeMensagem("error", "Erro na comunicação com a API ao adicionar o usuario"));
-  }
-
   componentDidMount() {
     ApiService.ListaAutores()
       .then(res => {
@@ -75,15 +64,12 @@ class App extends Component {
       <Fragment>
         <Header />
         <div className="container mb-10">
-          <h1>Casa do Código</h1>
+          <h2 className="center titulo">Acervo</h2>
           <Table autors={this.state.autors} handleRemoveItem={this.handleRemoveItem} />
-          <div>
-            <Form handleAddAutor={this.handleAddAutor} />
-          </div>
         </div>
       </Fragment>
     );
   }
 }
 
-export default App;
+export default Home;

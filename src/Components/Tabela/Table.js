@@ -19,7 +19,7 @@ const TableBody = props => {
         <td>{autor.nome}</td>
         <td>{autor.livro}</td>
         <td>{autor.preco}</td>
-        <td><button className = "waves-effect waves-light btn indigo lighten-2"  onClick = { () => { props.handleRemoveItem(autor.id) } }>Remover</button></td>
+        <td><button className = "waves-effect waves-light btn indigo lighten-2 btnRemover"  onClick = { () => { props.handleRemoveItem(autor.id) } }>Remover</button></td>
       </tr>
     )
   });
