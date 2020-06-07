@@ -7,10 +7,10 @@ const Header = () => {
       <div className="nav-wrapper menu">
         <LinkWrapper to="/" className="brand-logo">Biblioteca Popular</LinkWrapper>
         <ul className="right opcoes">
-          <li><LinkWrapper to="/autores">Autores</LinkWrapper></li>
-          <li><LinkWrapper to="/livros">Livros</LinkWrapper></li>
-          <li><LinkWrapper to="/adicionar">Adicionar Novo</LinkWrapper></li>
-          <li><LinkWrapper to="/sobre">Sobre</LinkWrapper></li>
+          <li><LinkWrapper to="/authors">Autores</LinkWrapper></li>
+          <li><LinkWrapper to="/books">Livros</LinkWrapper></li>
+          <li><LinkWrapper to="/newauthor">Adicionar Novo</LinkWrapper></li>
+          <li><LinkWrapper to="/about">Sobre</LinkWrapper></li>
         </ul>
       </div>
     </nav>

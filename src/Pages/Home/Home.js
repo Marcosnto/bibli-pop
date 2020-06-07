@@ -1,23 +1,10 @@
-import React, { /* useState, */ Component, Fragment } from 'react';
+import React, { Component, Fragment } from 'react';
 import 'materialize-css/dist/css/materialize.min.css';
 import './Home.scss'
 import Header from '../../Components/Header/Header'
 import Table from '../../Components/Tabela/Table'
 import PopUp from '../../utils/PopUp';
 import ApiService from '../../utils/ApiServices'
-
-// Função só para utilizar o State da forma mais atual
-// function CountClik(){
-//   const [counter, setCounter] = useState(0);
-
-//   return(
-//     <div>
-//       <button onClick = { () => setCounter(counter +1) }>Clique aqui</button>
-//       <h2>Você clicou: {counter} vezes</h2>
-//     </div>
-//   );
-// }
-
 
 class Home extends Component {
 

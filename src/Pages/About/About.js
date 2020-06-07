@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 import Header from '../../Components/Header/Header';
 
-const Sobre = () => {
+const About = () => {
 
   return (
     <Fragment>
@@ -26,4 +26,4 @@ const Sobre = () => {
   )
 }
 
-export default Sobre;
+export default About;

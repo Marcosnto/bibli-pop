@@ -4,7 +4,7 @@ import DataTable from '../../Components/DataTable/DataTable'
 import ApiService from '../../utils/ApiServices';
 import PopUp from '../../utils/PopUp';
 
-class Autores extends Component {
+class Authors extends Component {
 
   constructor(props) {
     super(props);
@@ -44,4 +44,4 @@ class Autores extends Component {
 
 }
 
-export default Autores;
+export default Authors;

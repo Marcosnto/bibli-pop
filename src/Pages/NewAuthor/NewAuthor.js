@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react';
 import Header from '../../Components/Header/Header';
-import Form from '../../Components/Formulario/Form';
+import Form from '../../Components/Form/Form';
 import ApiService from '../../utils/ApiServices';
 import PopUp from '../../utils/PopUp';
 
@@ -14,7 +14,7 @@ const handleAddAutor = autor => {
     .catch(err => PopUp.exibeMensagem("error", "Erro na comunicação com a API ao adicionar o usuario"));
 }
 
-const AdicionarNovo = () => {
+const NewAuthor = () => {
   return (
     <Fragment>
       <Header />
@@ -25,4 +25,4 @@ const AdicionarNovo = () => {
   );
 }
 
-export default AdicionarNovo;
+export default NewAuthor;
