@@ -18,4 +18,7 @@
   <li>Validação de Formulários</li>
   <li>Integração com API e validações de erros</li>
   <li>Integração de libs externas no projeto</li>
-<ul>  
+</ul>  
+
+<h2> Observações </h2>
+<a href="https://github.com/Marcosnto/bibli-op-api"> API utilizada</a>
