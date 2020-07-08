@@ -13,7 +13,8 @@ import { BrowserRouter, Switch, Route } from "react-router-dom";
 ReactDOM.render(
   <BrowserRouter>
     <Switch>
-      <Route path="/bibli-pop/" exact={true} component={Home} />
+      <Route path="/" exact={true} component={Home} />
+      <Route path="/bibli-pop" component={Home} />
       <Route path="/about" component={About} />
       <Route path="/authors" component={Authors} />
       <Route path="/books" component={Books} />
