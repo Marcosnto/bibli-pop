@@ -2,7 +2,7 @@ import React, { Component, Fragment } from 'react';
 import 'materialize-css/dist/css/materialize.min.css';
 import './Home.scss'
 import Header from '../../Components/Header/Header'
-import Table from '../../Components/Tabela/Table'
+import Tabela from '../../Components/Table/Table'
 import PopUp from '../../utils/PopUp';
 import ApiService from '../../utils/ApiServices'
 
@@ -45,13 +45,14 @@ class Home extends Component {
   }
 
   render() {
-    
+    const campos = [{ titulo: 'Autores', dado: 'nome'}, { titulo: 'Livro', dado: 'livro'}, 
+    { titulo: 'Preços', dado: 'preco'}]
     return (
       <Fragment>
         <Header />
         <div className="container mb-10">
           <h2 className="center titulo">Acervo</h2>
-          <Table autors={this.state.autors} handleRemoveItem={this.handleRemoveItem} />
+          <Tabela campos={campos} dados={this.state.autors} handleRemoveItem={this.handleRemoveItem}  />
         </div>
       </Fragment>
     );

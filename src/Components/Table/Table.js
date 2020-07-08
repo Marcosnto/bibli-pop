@@ -1,50 +1,65 @@
-import React, { Component } from "react"
+import React from "react"
+import Table from '@material-ui/core/Table';
+import TableBody from '@material-ui/core/TableBody';
+import TableCell from '@material-ui/core/TableCell';
+import TableHead from '@material-ui/core/TableHead';
+import TableRow from '@material-ui/core/TableRow';
+import Button from '@material-ui/core/Button';
 
-const TableHead = () => {
+const CellDeleta = ({ handleRemoveItem, id}) => {
+  if (!handleRemoveItem) {
+    return null
+  }
+
   return (
-    <tr>
-      <th>Nome</th>
-      <th>Livro</th>
-      <th>Preço</th>
-      <th>Remover</th>
-    </tr>
+    <TableCell>
+      <Button variant="contained" color="primary" onClick={() => { handleRemoveItem(id) }}>Remover</Button>
+    </TableCell>
   )
 }
 
-const TableBody = props => {
-  console.log(props);
-  const linhas = props.autors.map(autor => {
-    return (
-      <tr key={autor.id}>
-        <td>{autor.nome}</td>
-        <td>{autor.livro}</td>
-        <td>{autor.preco}</td>
-        <td><button className = "waves-effect waves-light btn indigo lighten-2 btnRemover"  onClick = { () => { props.handleRemoveItem(autor.id) } }>Remover</button></td>
-      </tr>
-    )
-  });
-
-  return (
-    <tbody>
-      {linhas}
-    </tbody>
-  );
-};
-
-class Table extends Component {
-
-  render() {
-
-    const { autors, handleRemoveItem } = this.props;
-    return (
-      <table className = "centered highlight">
-        <thead>
-          <TableHead />
-        </thead>
-          <TableBody autors = { autors } handleRemoveItem = { handleRemoveItem } />
-      </table>
-    )
+const TituloDeleta  = ({handleRemoveItem}) => {
+  if (!handleRemoveItem) {
+    return null
   }
+  return <TableCell>Remover</TableCell>
 }
 
-export default Table;
+const Tabela = (props) => {
+
+  const { campos, dados, handleRemoveItem } = props;
+
+  return (
+    <Table>
+      <TableHead>
+        <TableRow>
+          {
+            campos.map((campo) => (
+              <TableCell>{campo.titulo}</TableCell>
+              ))
+            }
+            <TituloDeleta handleRemoveItem={handleRemoveItem} titulo/>
+        </TableRow>
+      </TableHead>
+      <TableBody>
+        {
+          dados.map(dado => {
+            console.log(dados)
+            return (
+              <TableRow key={dado.id}>
+                {
+                  campos.map(campo => (
+                    <TableCell>{dado[campo.dado]}</TableCell>
+                  ))
+                }
+                <CellDeleta id={dado.id} handleRemoveItem={handleRemoveItem} />
+              </TableRow>
+            )
+          })
+        }
+      </TableBody>
+    </Table>
+  )
+}
+//autors={autors} handleRemoveItem={handleRemoveItem} /
+export default Tabela;

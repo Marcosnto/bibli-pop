@@ -1,5 +1,6 @@
 import React, { Fragment } from 'react';
 import Header from '../../Components/Header/Header';
+import Typography from '@material-ui/core/Typography';
 
 const About = () => {
 
@@ -7,7 +8,6 @@ const About = () => {
     <Fragment>
 
       <Header />
-
       <div className="container">
         <div className="row">
           <div className="col s12 autores">

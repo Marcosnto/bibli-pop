@@ -1,4 +1,4 @@
-import M   from 'materialize-css';
+import M from 'materialize-css';
 
 /* 
   centralização das pop-ups de mensagem
