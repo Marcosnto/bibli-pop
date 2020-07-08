@@ -2,7 +2,7 @@
   "name": "react-1",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://marcosnto.github.io/bibli-pop",
+  "homepage": "https://marcosnto.github.io/bibli-pop/",
   "dependencies": {
     "@material-ui/core": "^4.10.1",
     "materialize-css": "^1.0.0-rc.2",
