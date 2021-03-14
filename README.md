@@ -1,4 +1,4 @@
-<h1>Biblioteca Popular</h1>
+<h1>Biblioteca Popular 📖</h1>
 
 <p>Consiste na simulação de uma bibloteca de divulgação de livros e seus respectivos valores.</p> 
 
@@ -20,5 +20,5 @@
   <li>Integração de libs externas no projeto</li>
 </ul>  
 
-<h2> Observações </h2>
-<a href="https://github.com/Marcosnto/bibli-op-api"> API utilizada</a>
+<h2> API </h2>
+<p>Acesse a API do projeto  <a href="https://github.com/Marcosnto/bibli-op-api"><b>aqui.</b></a></p>
